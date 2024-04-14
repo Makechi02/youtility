@@ -1,7 +1,16 @@
 import java.io.*;
 
 public class YouTubeDownloader {
-	private static final String DEFAULT_DOWNLOAD_FOLDER = "/home/makechi/Downloads/videos/YouTube";
+	private static final String DEFAULT_DOWNLOAD_FOLDER;
+
+	static {
+		String os = System.getProperty("os.name");
+		if (os.contains("win")) {
+			DEFAULT_DOWNLOAD_FOLDER = System.getProperty("user.home") + "\\Videos\\Youtility";
+		} else {
+			DEFAULT_DOWNLOAD_FOLDER = System.getProperty("user.home") + "/Videos/Youtility";
+		}
+	}
 
 	public static void downloadVideo(String format, String url) {
 		try {

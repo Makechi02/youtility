@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/yt-downloader.iml" filepath="$PROJECT_DIR$/yt-downloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youtility.iml" filepath="$PROJECT_DIR$/youtility.iml" />
     </modules>
   </component>
 </project>
