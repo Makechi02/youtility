@@ -16,10 +16,14 @@ public class Main {
 		try {
 			System.out.print("Enter the URL of the video or playlist: ");
 			String url = reader.readLine();
-			displayMenu();
-			String format = getFormat(reader.readLine());
 
-			YouTubeDownloader.downloadVideo(format, url);
+			if (checkIfShorts(url)) {
+				System.out.println("Downloading shorts...");
+				YouTubeDownloader.downloadShorts(url);
+			} else {
+				displayMenu();
+				YouTubeDownloader.downloadVideo(getFormat(reader.readLine()), url);
+			}
 		} catch (IOException e) {
 			throw new RuntimeException(e.getMessage());
 		}
@@ -58,6 +62,10 @@ public class Main {
 	private static void quitApplication() {
 		System.out.println("It's sad to see you leave!");
 		System.exit(0);
+	}
+
+	private static boolean checkIfShorts(String url) {
+		return url.contains("/shorts/");
 	}
 
 }
