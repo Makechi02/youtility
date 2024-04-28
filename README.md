@@ -41,11 +41,12 @@ Follow the prompts to enter the URL of the video or playlist and choose the desi
 
 The following format options are available:
 
-1. Best video and audio
-2. 720p video
-3. 480p video
-4. 360p video
-5. Audio only
+1. 2160p video,
+2. 1080p video,
+3. 720p video
+4. 480p video
+5. 360p video
+6. Audio only (m4a format)
 
 ## Default Download Folder
 

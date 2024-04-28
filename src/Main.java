@@ -3,7 +3,8 @@ import java.io.*;
 public class Main {
 
 	private static final String[] FORMAT_OPTIONS = {
-			"Best video and audio",
+			"2160p video",
+			"1080p video",
 			"720p video",
 			"480p video",
 			"360p video",
@@ -23,11 +24,12 @@ public class Main {
 
 			int choice = Integer.parseInt(reader.readLine());
 			String format = switch (choice) {
-				case 1 -> "bestvideo[height<=720]+bestaudio/best[height<=720]";
-				case 2 -> "best[height<=720]";
-				case 3 -> "best[height<=480]";
-				case 4 -> "best[height<=360]";
-				case 5 -> "bestaudio";
+				case 1 -> "best[height<=2160]";
+				case 2 -> "best[height<=1080]";
+				case 3 -> "best[height<=720]";
+				case 4 -> "best[height<=480]";
+				case 5 -> "best[height<=360]";
+				case 6 -> "bestaudio[ext=m4a]";
 				default -> {
 					System.out.println("Invalid choice. Using default format.");
 					yield "";
